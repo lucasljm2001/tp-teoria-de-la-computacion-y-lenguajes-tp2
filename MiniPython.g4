@@ -24,8 +24,11 @@ printStat  : 'print' '(' expr (',' expr)* ')' ;
 expr       : ID
            | INT
            | STRING
-           | expr op=('>' | '<' | '==' | '+') expr
+           | expr simbolo expr
            ;
+
+simbolo    :  '>' | '<' | '==' | '+' ;
+            
 
 // Reglas léxicas (Lexer)
 ID         : [a-zA-Z_][a-zA-Z0-9_]* ;
