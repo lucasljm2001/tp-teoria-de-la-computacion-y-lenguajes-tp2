@@ -30,6 +30,6 @@ expr       : ID
 // Reglas léxicas (Lexer)
 ID         : [a-zA-Z_][a-zA-Z0-9_]* ;
 INT        : [0-9]+ ;
-STRING     : '"' (~['"\r\n"])* '"' ;
+STRING     : '"' (~[\r\n"])* '"' ;
 
 WS         : [ \t\r\n]+ -> skip ; // Ignora espacios y saltos de línea
