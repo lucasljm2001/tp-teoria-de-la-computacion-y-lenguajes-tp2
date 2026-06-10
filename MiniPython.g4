@@ -1,5 +1,6 @@
 grammar MiniPython;
 
+// Reglas sintácticas (Parser)
 program    : functionDef* EOF ;
 
 functionDef: 'fn' ID '(' paramList? ')' block ;
@@ -29,6 +30,7 @@ expr       : ID
 simbolo    :  '>' | '<' | '==' | '+' ;
             
 
+// Reglas léxicas (Lexer)
 ID         : [a-zA-Z_][a-zA-Z0-9_]* ;
 INT        : [0-9]+ ;
 STRING     : '"' (~[\r\n"])* '"' ;
